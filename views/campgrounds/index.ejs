@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+    <% if(currentUser && currentUser.isAdmin) { %>
+        <p>You are an administrator</p>
+    <% } %>
+    <header class="jumbotron">
+        <div>        
+            <h1><span class="glyphicon glyphicon-tent"></span> Welcome to YelpCamp</h1>
+            <p>View our hand-picked campgrounds from all over the world</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="/campgrounds/new">Add new Campground</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" id="flex-wrap">
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div id="index-thumb" class="thumbnail">
+                        <img src="<%=campground.image %>">
+                        <div class="caption">
+                            <h4> <%= campground.name %> </h4>
+                        </div>
+                        <p><a href="/campgrounds/<%= campground._id%>" class="btn btn-block btn-primary">More info</a></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,28 @@
+Hi Everyone,
+
+In the next few lectures you will learn about an Object Document Modeling (ODM) package for Express called Mongoose.
+
+You may run into a warning in your terminal regarding the deprecation of mpromise, it will look like this:
+
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library
+instead: http://mongoosejs.com/docs/promises.html
+We don't use promises in this course, so that warning can be safely ignored.
+
+If you want the warning to go away then you can plug the following line of code into your app, after you've required mongoose: mongoose.Promise = global.Promise; 
+
+That line of code simply replaces Mongoose's default promise library with JavaScript's native promise library.
+
+Update: Another warning that you may experience when using mongoose is this:
+
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, 
+or set the `useMongoClient` option if using `connect()` or `createConnection()`
+To make this go away simply use:
+
+mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true});
+instead of the regular mongoose.connect() syntax.
+
+cheers,
+Ian
+
+
+5a52aa6d9acf2b0fd1a92213

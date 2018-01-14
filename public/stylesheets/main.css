@@ -1,0 +1,40 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+#comments-well {
+    background:white;
+}
+/*
+.btn {
+    background: white;
+    color: darkgray;
+    border-color: darkgray;
+    
+}
+*/
+#index-thumb  {
+    margin-bottom: 0;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
